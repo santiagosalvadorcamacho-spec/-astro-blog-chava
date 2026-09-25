@@ -1,5 +1,23 @@
 ---
+import '../styles/global.css';
+const pageTitle = "Sobre mí";
 
+const identity = {
+	firstName: "Chava",
+	country: "México",
+	occupation: "estudiante de Desarrollo de Software en el CETI Colomos",
+	hobbies: ["el gym", "la música", "armar proyectos con Arduino"],
+};
+
+const skills = ["C++", "C#", "Java", "Kotlin", "Python", "JavaScript", "Arduino", "Astro"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+
+const skillColor = "crimson";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <html lang="es">
@@ -9,20 +27,49 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Sobre mí | Blog de Chava</title>
+		<title>{pageTitle}</title>
+		<style define:vars={{ skillColor, fontWeight, textCase }}>
+			h1 {
+				color: purple;
+				font-size: 4rem;
+			}
+			.skill {
+				color: var(--skillColor);
+				font-weight: var(--fontWeight);
+				text-transform: var(--textCase);
+			}
+		</style>
 	</head>
 	<body>
 		<a href="/">Inicio</a>
 		<a href="/about/">Sobre mí</a>
 		<a href="/blog/">Blog</a>
 
-		<h1>Sobre mí</h1>
+		<h1>{pageTitle}</h1>
 		<h2>... y mi nuevo sitio con Astro</h2>
 
-		<p>Soy Salvador Camacho, pero todos me dicen Chava. Estudio el Tecnólogo en Desarrollo de Software en el CETI Colomos, grupo 8A1.</p>
-
-		<p>Me gusta combinar hardware y software: he programado en C++, C#, Java, Kotlin, Python, JavaScript y Arduino.</p>
+		<p>Soy Salvador Camacho, pero todos me dicen Chava. Estudio en el CETI Colomos, grupo 8A1.</p>
 
 		<p>Esta es la segunda página de mi sitio y la primera que construí yo mismo. Se irá actualizando conforme avance en el tutorial de Astro.</p>
+
+		<p>Algunos datos sobre mí:</p>
+		<ul>
+			<li>Me llamo {identity.firstName}.</li>
+			<li>Vivo en {identity.country} y soy {identity.occupation}.</li>
+			{identity.hobbies.length >= 2 &&
+				<li>Dos de mis pasatiempos son: {identity.hobbies[0]} y {identity.hobbies[1]}.</li>
+			}
+		</ul>
+
+		<p>Mis habilidades son:</p>
+		<ul>
+			{skills.map((skill) => <li class="skill">{skill}</li>)}
+		</ul>
+
+		{happy && <p>¡Estoy feliz de estar aprendiendo Astro!</p>}
+
+		{finished && <p>¡Terminé este tutorial!</p>}
+
+		{goal === 3 ? <p>Mi meta es terminar en 3 días.</p> : <p>Mi meta no es de 3 días.</p>}
 	</body>
 </html>
