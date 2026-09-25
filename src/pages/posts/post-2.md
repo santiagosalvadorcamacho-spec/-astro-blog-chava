@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Mi segundo post
 author: Chava
 description: "Después de aprender un poco de Astro, ya no pude parar."

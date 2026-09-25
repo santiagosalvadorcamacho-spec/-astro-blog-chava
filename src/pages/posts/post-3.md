@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Mi tercer post
 author: Chava
 description: "Tuve algunos tropiezos, pero todos tenían solución."

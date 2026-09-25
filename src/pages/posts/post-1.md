@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Mi primer post'
 pubDate: 2026-09-25
 description: 'El primer post de mi nuevo blog hecho con Astro.'
@@ -8,10 +9,6 @@ image:
     alt: 'El logo de Astro sobre un fondo oscuro con un brillo rosa.'
 tags: ["astro", "blog", "aprendiendo"]
 ---
-# Mi primer post
-
-Publicado el: 2026-09-25
-
 ¡Bienvenido a mi _nuevo blog_ sobre cómo aprendo Astro! Aquí voy a compartir lo que voy aprendiendo mientras construyo este sitio.
 
 ## Lo que he logrado
