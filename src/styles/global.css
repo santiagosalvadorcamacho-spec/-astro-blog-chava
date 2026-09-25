@@ -76,7 +76,10 @@ h1 {
 	.menu {
 		display: none;
 	}
-	/* Greeting (isla de Preact) */
+}
+
+/* Greeting (isla de Preact) */
+
 .greeting button {
 	background-color: #4c1d95;
 	color: #fff;
@@ -91,4 +94,42 @@ h1 {
 .greeting button:hover {
 	background-color: #6d28d9;
 }
+
+/* ===== Modo oscuro ===== */
+
+html.dark {
+	background-color: #1e1b4b;
+	color: #f5f3ff;
+}
+
+.dark .menu {
+	background-color: #f5f3ff;
+	color: #4c1d95;
+}
+
+.dark .nav-links a {
+	color: #f5f3ff;
+}
+
+.dark .nav-links a:hover,
+.dark .nav-links a:focus {
+	color: #4c1d95;
+}
+
+.dark a {
+	color: #c4b5fd;
+}
+
+.dark h1 {
+	color: #c4b5fd;
+}
+
+/* Botoncitos de etiquetas */
+.dark .tag {
+	background-color: #2e1065;
+	border-color: #a78bfa;
+}
+
+.dark .tag a {
+	color: #f5f3ff;
 }
